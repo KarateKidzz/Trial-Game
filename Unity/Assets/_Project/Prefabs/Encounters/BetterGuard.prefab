@@ -1,0 +1,190 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1999098405821871814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3614513812652709033}
+  - component: {fileID: 6350626393382480856}
+  m_Layer: 0
+  m_Name: Second Wave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3614513812652709033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999098405821871814}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2655620747577611047}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6350626393382480856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999098405821871814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e05df36e50994ca4ac3db1d1d2d2ef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 4678920217350525451, guid: 01788fea9436542e088cda3b039cd07b, type: 3}
+  MinFallSpeed: 2
+  MaxFallSpeed: 4
+  projectileSpawnInterval: 0.4
+--- !u!1 &2655620747577611044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2655620747577611047}
+  - component: {fileID: 1822818342979911285}
+  - component: {fileID: -4727865823318992276}
+  m_Layer: 0
+  m_Name: BetterGuard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2655620747577611047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2655620747577611044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 9145519855268566741}
+  - {fileID: 3614513812652709033}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1822818342979911285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2655620747577611044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c051b195e22469db9eb3b79870aae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EncounterText: The Guard growls
+  WaveTime: 4
+  ArenaWidth: 1
+  CustomWidth: 500
+  CustomHeight: 400
+  VoiceEvent: event:/
+  CanFlee: 0
+  Enemies:
+  - {fileID: -4727865823318992276}
+  Waves:
+  - {fileID: 4679172958113356973}
+  - {fileID: 6350626393382480856}
+  CurrentWave: {fileID: 0}
+--- !u!114 &-4727865823318992276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2655620747577611044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaa86db985f34178a6c42fcd717b00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyName: Dungeon Guard
+  Sprite: {fileID: 21300000, guid: 0cf641fe5d61fb1489c39d954e41a6ed, type: 3}
+  TextBubbleDirection: 4
+  HealthPoints: 30
+  StartHealth: 0
+  Attack: 5
+  Defense: 4
+  CheckMessage: The enemy looks like itself
+  CanCheck: 1
+  CanSpare: 0
+  CurrentDialogue: []
+  PreActionDialogue: []
+  Comments:
+  - Slobber falls from the Guard's mouth
+  - The stench of his sweat fills your nose
+  - His eyes bore into yours
+  RandomDialogue:
+  - Human bad! Human die!
+  - Back in the dungeon for you!
+  Commands:
+  - Pretend to be a monster
+  ItemActions: []
+--- !u!1 &7288529548753951721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9145519855268566741}
+  - component: {fileID: 4679172958113356973}
+  m_Layer: 0
+  m_Name: Basic Wave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9145519855268566741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288529548753951721}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2655620747577611047}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4679172958113356973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288529548753951721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a69d73b4006604466b420dcdcb974f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 5892920023436372107, guid: ea65569768ab04aa29e84d598e2173a4, type: 3}
+  moveSpeed: 2
+  projectileSpawnInterval: 1.3
+  minActivateTime: 0.5
+  maxActivateTime: 1.2
